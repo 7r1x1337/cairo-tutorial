@@ -474,3 +474,5 @@ Functions are pure when they don't take `self: @ContractState` as a parameter, m
 - To create internal functions, define a separate `impl` block (without `#[abi(embed_v0)]`) and add the `#[generate_trait]` attribute. This generates a trait automatically, keeping these functions internal to the contract.
 - To create a pure function (one that cannot access the state), declare a `mod` inside the contract. Then create a `pub fn` inside the inner `mod`. This function will be accessible to the outer `mod`, but not anything else.
 - A `mod` can be put in another file and imported. Only the `pub` functions will be visible on the outside.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

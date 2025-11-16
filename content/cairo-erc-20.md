@@ -1794,3 +1794,5 @@ Once done, run `scarb test test_mint` to verify it works.
 This tutorial covered building and testing an ERC-20 token contract on Starknet. From here, the contract can be extended with features like pausing, access controls, and so on.
 
 Alternatively, OpenZeppelin's pre-built components for Cairo can be used instead of building everything from scratch. See the "Component 2[LINK]" chapter to learn how to integrate OpenZeppelin's ERC20, Ownable, and Pausable components into a contract.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

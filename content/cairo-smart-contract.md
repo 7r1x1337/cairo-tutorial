@@ -356,3 +356,5 @@ The structure discussed in this article is one possible approach, but it’s not
 ## Next steps
 
 To continue learning about Cairo contracts, you are encouraged to try and play with the exercises in our [GitHub repo](https://github.com/RareSkills/Cairo-Exercises).
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

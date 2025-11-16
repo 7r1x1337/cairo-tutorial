@@ -701,3 +701,5 @@ fn test_only_owner_can_pause() {
     - Test that burning decreases the total supply
     - Test that burning cannot happen when the contract is paused
     - Test that a user cannot burn more tokens than they have
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

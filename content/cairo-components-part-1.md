@@ -368,3 +368,5 @@ To import the functions, create a new `impl` declared with `#[abi(embed_v0)]` an
 To import storage, create a new key in the contract’s storage with `#[substorage(v0)]`. Set the key for the storage to be the same name declared for `storage:` in the `component!` macro. Then set the value to be the path to the storage struct in the component.
 
 To import events, create a new entry in the event enum and apply the `#[flat]` attribute to it. Set the entry to be the same name declared for `event:` in the `component!` macro. Then set the type to be the path to the enum in the component.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

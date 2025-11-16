@@ -980,3 +980,5 @@ This article covered some primary cheatcodes for Cairo smart contract testing: `
 Similar to the cheatcodes within Solidity Foundry's testing framework, Starknet Foundry cheatcodes offer comparable functionality with syntax adapted for Cairo's architecture. The core testing concepts remain consistent across both ecosystems.
 
 For additional cheatcodes, refer to the starknet foundry [book](https://foundry-rs.github.io/starknet-foundry/appendix/cheatcodes.html).
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

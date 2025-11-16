@@ -820,3 +820,5 @@ Cairo is a Rust-like language with familiar control structures.
 - Using signed and unsigned is preferred over `felt252` type due to overflow protection.
 - Variables are immutable by default and must be declared `mut` if their value will change in the future.
 - Cairo supports arrays and dictionaries for grouping data together.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

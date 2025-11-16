@@ -235,3 +235,5 @@ Like other languages designed for blockchain, Cairo doesn’t have as significan
 - Scarb is very similar to Rust cargo. If you encounter issues with Scarb, do an internet search with your error message for “cargo” instead of Scarb to increase your chances of finding a relevant solution.
 
 In the next chapter, we will write our first Cairo program.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

@@ -415,3 +415,5 @@ This approach prevents the silent data loss common in other languages and catche
 Unlike Solidity, which requires manual safety checks for type conversion, Cairo builds error handling directly into its casting system through `Option` types.
 
 While Cairo's conversion requirements need more code than implicit casting, this explicitness builds more reliable smart contracts.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

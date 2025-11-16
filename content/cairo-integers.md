@@ -746,3 +746,5 @@ Exponentiation uses `.pow()` via a trait import.
 Bitwise and comparison operators work normally across integer types.
 
 `felt252` is Cairo’s native field element with no overflow checks like integers. Division on felt requires a function (`felt252_div`) with zero-checking.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

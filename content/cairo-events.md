@@ -978,3 +978,5 @@ Cairo events require more explicit structure compared to Solidity and enforce st
 - `EventEmitter` emits the structured event.
 
 Structs with nested or non-primitive types must derive `Serde` to compile. Indexed fields marked with `#[key]` are stored separately for filtering, use `#[key]` on primitive types like `u32`, `felt252`, or `ContractAddress` for effective querying, as complex types get hashed and become unreadable. The `#[flat]` attribute applies to nested event enums to flatten naming hierarchy, enabling distinct event selectors for better query granularity.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

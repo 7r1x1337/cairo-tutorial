@@ -436,3 +436,5 @@ To confirm, run `scarb test`, the test should pass. In a later article we will s
 
 ## Is There a Payable-Like Constructor?
 While STRK behaves like an ERC-20 token, it also serves as Starknet’s native fee token. However, Starknet does not have a true “native token” in the same sense as Ethereum’s ETH. As a result, Cairo does not support “payable” constructors. If we want to enforce that a contract has a certain STRK balance at deployment, we can transfer STRK to the predicted address, then assert in the constructor that the balance of the contract is at least the desired amount.
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*

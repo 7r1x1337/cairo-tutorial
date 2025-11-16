@@ -172,3 +172,5 @@ assert!(caller_felt == owner, "Caller was: {}", caller_felt);
 So while `assert!` gives you expressive error handling, keep in mind the type requirements when formatting your messages.
 
 **Exercise:** Write a Cairo function that takes two numbers, `n` and `d`, and returns their division. If `d` is zero, the function should revert with the message: “**n is not divisible by d**” (including the actual values of `n` and `d` in the error). Hint use `assert!` function. To solve the `safe_divide` exercise, clone this [repo](https://github.com/RareSkills/Cairo-Exercises/tree/main).
+
+*This article is part of a tutorial series on [Cairo Programming on Starknet](https://rareskills.io/cairo-tutorial)*
