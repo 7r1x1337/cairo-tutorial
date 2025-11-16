@@ -27,7 +27,7 @@ The code above includes the following features:
 
 An interface defines a set of functions that a contract **must** implement. Interfaces are not mandatory for contracts, but their usage is encouraged.
 
-In Cairo, this same idea is represented using a **trait**, which defines list of functions without providing their implementation. In that sense, a Cairo trait plays the same role as an interface in Solidity. 
+In Cairo, this same idea is represented using a **trait**, which defines list of functions without providing their implementation. In that sense, a Cairo trait plays the same role as an interface in Solidity.
 
 However, it’s important to clarify that a trait on its own is not automatically treated as a contract interface. We need to explicitly mark the trait as an interface for it to be treated as one and that’s done using an annotation which we will see in a later section.
 
@@ -104,7 +104,7 @@ Notice that the `increase_counter` function uses the `ref` keyword in its parame
 pub trait ICounter<TContractState> {
 	// Function that can read and modify the contract's state
     fn increase_counter(ref self: TContractState, amount: felt252);
-    
+
     // Function that can only read from the contract's state
     fn get_counter(self: @TContractState) -> felt252;
 }
@@ -117,7 +117,7 @@ mod Counter {
     }
 
     impl CounterImpl of super::ICounter<ContractState> {
-		    
+
 		    // Uses `ref self`: gives read and write access to the storage
         fn increase_counter(ref self: ContractState, amount: felt252) {
             self.counter.write(self.counter.read() + amount);
@@ -271,31 +271,31 @@ To see the test, navigate to `./tests/test_contract.cairo`. Below is a break dow
 ![imports at the top of a cairo contract file](https://r2media.rareskills.io/CairoContract/image1.png)
 
 1. `use starknet::ContractAddress;`
-    
+
     This imports ContractAddress from `starknet` module.
-    
+
     - Imports the `ContractAddress` type.
     - This is Starknet’s representation of a contract address and is required whenever interacting with or referencing deployed contracts.
 2. `use snforge_std::{declare, ContractClassTrait, DeclareResultTrait};`
-    
+
     This imports the tools needed to declare and deploy contracts during testing from starknet foundry standard library `snforge_std`.
-    
+
     - `declare`: Used to declare a contract in the test environment before deployment. It’s like submitting the contract code to the network.
     - `ContractClassTrait`: Provides helper methods for interacting with declared contract classes (*such as deploying them*).
     - `DeclareResultTrait`: Exposes a function on the declaration result that retrieves the contract class (equivalent to the contract’s bytecode in Solidity).
 3. `use counter::IHelloStarknetSafeDispatcher;` and `use counter::IHelloStarknetSafeDispatcherTrait;`
-    
+
     This imports the safe version of the contract interface from the project name, in our case, `counter`.
-    
+
     - `IHelloStarknetSafeDispatcher`: The safe dispatcher is responsible for calling the contract’s functions. But unlike Solidity where a function call just returns the value directly, here every call returns a wrapper that either contains the returned value (if successful) or an error (if it failed).
-        
+
         Importantly, even if a contract call fails, execution continues within the test function. This allows the safe dispatcher to handle the error gracefully instead of reverting the entire transaction.
-        
+
     - `IHelloStarknetSafeDispatcherTrait`: Exposes the callable functions in the contract for the dispatcher. Every function’s return value is wrapped, indicating it could succeed or fail.
 4. `use counter::IHelloStarknetDispatcher;` and `use counter::IHelloStarknetDispatcherTrait;`
-    
+
     This imports the contract interface (not the safe version) from the project name, in our case, `counter`.
-    
+
     - `IHelloStarknetDispatcher`: The dispatcher also calls the contract’s functions. However, unlike the safe version, it directly returns the function’s value without any wrapper. If the target contract fails, the call immediately panics, causing execution to stop in the test function and preventing any form of graceful error handling.
     - `IHelloStarknetDispatcherTrait`: Exposes the callable functions in the contract for the dispatcher. Every functions return the raw return types of the interface
 
