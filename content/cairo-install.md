@@ -165,7 +165,7 @@ Cairo contracts have the following capabilities and/or differences compared to S
 - Like Rust, Cairo is not object-oriented and therefore does not support inheritance. However, Cairo provides other ways to compose code together
 - Solidity contracts upgrade through proxy patterns; however, Cairo contracts can upgrade their bytecode while keeping the storage intact
 - There is no “native token” in Cairo and hence no `msg.value`. By default, gas is paid using the STRK token, which is an ERC-20 token. You can see the token on the [explorer here](https://voyager.online/contract/0x04718f5a0Fc34cC1AF16A1cdee98fFB20C31f5cD61D6Ab07201858f4287c938D).
-- Starknet has account abstraction built into the protocol, so there is no such thing as an “Exaternally Owned Address (EOA)”
+- Starknet has account abstraction built into the protocol, so there is no such thing as an "Externally Owned Address (EOA)”
 
 The last point may cause some confusion for developers coming from EVM compatible chains, but don’t worry, we will explore this in great detail later.
 
